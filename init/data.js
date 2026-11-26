@@ -47,18 +47,7 @@ const sampleListings = [
     location: "Florence",
     country: "Italy",
   },
-  {
-    title: "Secluded Treehouse Getaway",
-    description:
-      "Live among the treetops in this unique treehouse retreat. A true nature lover's paradise.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdGVsc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 800,
-    location: "Portland",
-    country: "United States",
-  },
+
   {
     title: "Beachfront Paradise",
     description:
@@ -346,6 +335,18 @@ const sampleListings = [
     price: 1800,
     location: "Costa Rica",
     country: "Costa Rica",
+  },
+  {
+    title: "Secluded Treehouse Getaway",
+    description:
+      "Live among the treetops in this unique treehouse retreat. A true nature lover's paradise.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdGVsc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 800,
+    location: "Portland",
+    country: "United States",
   },
 ];
 

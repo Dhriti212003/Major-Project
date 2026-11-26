@@ -1,17 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WanderLust</title>
-  </head>
-  <body>
-    <h3>All Listings</h3>
-    <ul>
-      <% for(let listing of allListings){ %>
-        <li><a href="/listings/<%= listing._id %>"><%= listing.title %></a></li>
-      <% } %>
-    </ul>
-  </body>
-</html>
+<% layout("/layouts/boilerplate") %>
 
+<h3 class="my-3">All Listings</h3>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+  <% for (let listing of allListings) { %>
+    <div class="col">
+      <a href="/listings/<%= listing._id %>" class="text-decoration-none text-dark">
+        <div class="card h-100 listing-card">
+          <img
+            src="<%= listing.image?.url || 'https://placeholder.com' %>"
+            class="card-img-top"
+            alt="<%= listing.title %>"
+            style="height: 20rem;"
+          />
+          <div class="card-img-overlay"></div>
+          <div class="card-body">
+            <p class="card-text">
+              <b><%= listing.title %></b><br />
+              ₹<%= listing.price?.toLocaleString("en-IN") ?? "Price unavailable" %> / night
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  <% } %>
+</div>
